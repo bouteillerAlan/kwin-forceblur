@@ -1,9 +1,10 @@
 import QtQuick 2.15
-import org.kde.plasma.core 2.0 as PlasmaCore;
-import org.kde.plasma.components 2.0 as Plasma;
-import org.kde.kwin 2.0;
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.components as Plasma
+import org.kde.kwin
+import org.kde.plasma.plasma5support as Plasma5Support
 
-Item {
+PlasmoidItem {
     id: root
 
     readonly property var patterns: (
@@ -22,7 +23,7 @@ Item {
         KWin.readConfig("blurContent", false)
     )
 
-    PlasmaCore.DataSource {
+    Plasma5Support.DataSource {
         id: shell
         engine: 'executable'
         connectedSources: []
@@ -49,15 +50,15 @@ Item {
     }
 
     Connections {
-    target: shell
-    function onExited(shell, exitCode, exitStatus, stdout, stderr) {
-        console.log('onExited', shell, exitCode, exitStatus, stdout, stderr)
-        console.log('exited out', stdout)
-        console.log('exited err', sterr)
-    }
-    function onConnected(source) {
-      console.log('connected', source)
-    }
+        target: shell
+        function onExited(shell, exitCode, exitStatus, stdout, stderr) {
+            console.log('onExited', shell, exitCode, exitStatus, stdout, stderr)
+            console.log('exited out', stdout)
+            console.log('exited err', sterr)
+        }
+        function onConnected(source) {
+            console.log('connected', source)
+        }
     }
 
     /*
