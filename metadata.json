@@ -14,16 +14,11 @@
                 "Email": "esjeon@hyunmu.am",
                 "Name": "Eon S. Jeon"
             }
-        ],
-
-        "ServiceTypes": [
-            "KWin/Script"
         ]
     },
     "Keywords": "blur",
-
+    "KPackageStructure": "KWin/Script",
     "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted",
-    "X-Plasma-API": "declarativescript",
-    "X-Plasma-MainScript": "code/main.qml",
-    "KPackageStructure": "KWin/Script"
+    "KPackageStructure": "KWin/Script",
+    "X-Plasma-API-Minimum-Version": "6.0"
 }
