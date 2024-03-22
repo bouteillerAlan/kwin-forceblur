@@ -5,7 +5,7 @@
         "Description": "Force-enable Blur effect for certain windows",
         "Icon": "preferences-system-windows-script-test",
 
-        "Id": "forceblur",
+        "Id": "kwin-forceblur",
         "License": "MIT",
         "Version": "0.7",
 
@@ -17,8 +17,8 @@
         ]
     },
     "Keywords": "blur",
-    "KPackageStructure": "KWin/Script",
     "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted",
     "KPackageStructure": "KWin/Script",
-    "X-Plasma-API-Minimum-Version": "6.0"
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "code/main.qml"
 }
